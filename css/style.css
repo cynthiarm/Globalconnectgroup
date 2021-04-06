@@ -9061,7 +9061,7 @@ textarea.form-control {
   position: relative;
   margin-top: 0px;
   padding-top: 80px;
-  background: url(../images/footer_bg.jpg) no-repeat center center;
+  background: url(../images/footer.jpg) no-repeat center center;
 }
   .ftco-footer-area .ftco-footer-widget {
     width: 100%;
@@ -9540,7 +9540,7 @@ textarea.form-control {
         height: 300px; } }
   .ftco-counter .icon span {
     font-size: 50px;
-    color: #000000;
+    color: #233e62;
     line-height: 1; }
   .ftco-counter .block-18 {
     display: block;
