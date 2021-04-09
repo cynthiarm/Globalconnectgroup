@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/d6ac6a7230.js" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   </head>
   <body>
 	  <div class="bg-top navbar-light">
@@ -352,20 +353,23 @@
 	<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
     	<div class="overlay"></div>
     	<div class="container">
-    		<div class="row justify-content-end">
-    			<div class="col-md-6 py-5 px-md-5">
+    		<div class="row justify-content-center">
+    			<div class="col-md-9 py-5 px-md-5">
     				<div class="py-md-5">
 		          <div class="heading-section heading-section-white ftco-animate mb-5">
-		            <h2 class="mb-4">Contact Us For Service</h2>
-		            <p>If you are interested to know more about our consulting services, please send a message</p>
+		            <h2 class="mb-4 text-center">Contact Us For Service</h2>
+		            <p class="mb-4 text-center">If you are interested to know more about our consulting services, please send a message.</p>
 		          </div>
-		          <form action="#" class="appointment-form ftco-animate">
+		          <form method="post" autocomplete="off" name="google-sheet" class="appointment-form ftco-animate">
 		    				<div class="d-md-flex">
 			    				<div class="form-group">
-			    					<input type="text" class="form-control" placeholder="First Name">
+			    					<input type="text" class="form-control" placeholder="First Name" name="First Name" value="" required=""/>
 			    				</div>
 			    				<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Last Name">
+			    					<input type="text" class="form-control" placeholder="Last Name" name="Last Name" value="" required=""/>
+			    				</div>
+								<div class="form-group ml-md-4">
+			    					<input type="text" class="form-control" placeholder="Email" name="Email" value="" required=""/>
 			    				</div>
 		    				</div>
 		    				<div class="d-md-flex">
@@ -373,36 +377,36 @@
 			    					<div class="form-field">
 		        					<div class="select-wrap">
 		                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                    <select name="" id="" class="form-control">
-		                    	<option value="">Select Service</option>
-		                      <option value="">Organizational design</option>
-		                      <option value="">Business development</option>
-		                      <option value="">Communications</option>
-		                      <option value="">Public affairs</option>
-		                      <option value="">Business investment</option>
-							  <option value="">International relations</option>
+		                    <select name="Services" name="Services" class="form-control" value="" required="">
+		                    	<option value="Select Service">Select Service</option>
+		                      <option value="Organizational design">Organizational design</option>
+		                      <option value="Business development">Business development</option>
+		                      <option value="Communications">Communications</option>
+		                      <option value="Public affairs">Public affairs</option>
+		                      <option value="Business investment">Business investment</option>
+							  <option value="International relations">International relations</option>
 		                    </select>
 		                  </div>
 			              </div>
 			    				</div>
 		    					<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Phone">
+			    					<input type="text" class="form-control" placeholder="Phone" name="phone" value="" required=""/>
 			    				</div>
 		    				</div>
 		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+		    			<div class="form-group">
+			              <textarea name="Message" name="Message" cols="30" rows="2" class="form-control" placeholder="Message" value="" required=""></textarea>
 			            </div>
 			            <div class="form-group ml-md-4">
 			              <input type="submit" value="Send Message" class="btn btn-white py-3 px-4">
 			            </div>
 		    				</div>
 		    			</form>
+						<div class="alert">Your message has been sent</div>
 		    		</div>
     			</div>
     	</div>
     </section>
-
 
 	<footer class="ftco-footer-area ftco-bg-dark ftco-section">
 		<div class="container">
@@ -431,21 +435,21 @@
 			  </div>
 			</div>
 			<div class="col-md-6 col-lg-2">
-			  <div class="ftco-footer-widget mb-5 ml-md-4">
-				<h2 class="ftco-heading-2">Links</h2>
-				<ul class="list-unstyled">
-				  <li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-1"></span>Home</a></li>
-				  <li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-1"></span>About</a></li>
-				  <li><a href="services.html"><span class="ion-ios-arrow-round-forward mr-1"></span>Services</a></li>
-				  <li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-1"></span>Contact</a></li>
-				</ul>
+				<div class="ftco-footer-widget mb-5 ml-md-4">
+				  <h2 class="ftco-heading-2">Links</h2>
+				  <ul class="list-unstyled">
+					<li><a href="index.html"><span class="ion-ios-arrow-round-forward mr-1"></span>Home</a></li>
+					<li><a href="about.html"><span class="ion-ios-arrow-round-forward mr-1"></span>About</a></li>
+					<li><a href="services.html"><span class="ion-ios-arrow-round-forward mr-1"></span>Services</a></li>
+					<li><a href="contact.html"><span class="ion-ios-arrow-round-forward mr-1"></span>Contact</a></li>
+				  </ul>
+				</div>
 			  </div>
-			</div>
-			<div class="col-md-6 col-lg-3">
-			  <div class="ftco-footer-widget mb-5">
-		
-				  
-			  </div>
+			  <div class="col-md-6 col-lg-3">
+				<div class="ftco-footer-widget mb-5">
+	  
+					
+				</div>
 	 <!--         <div class="ftco-footer-widget mb-5">
 				  <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
 				  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
@@ -473,7 +477,7 @@
 	
 	
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#1b9ce3"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>
@@ -489,8 +493,30 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+
   <script src="js/main.js"></script>
-    
+
+  <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbwECww8KlhAjIk_M5SgRJSvh1k9Pxk362rnzfB80o_mQ2oNaIDJ/exec'
+	const form = document.forms['google-sheet']
+ 
+	form.addEventListener('submit', e => {
+	  e.preventDefault()
+	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+
+	
+		document.querySelector('.alert').style.display = 'block';
+
+        // Hide alert after 3 seconds
+        setTimeout(function(){
+        document.querySelector('.alert').style.display = 'none';
+        },3000);
+
+       // Clear form
+       document.getElementById('contactForm').reset();	
+
+	})
+  </script>
+
   </body>
 </html>
