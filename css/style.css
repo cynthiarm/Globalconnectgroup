@@ -8651,7 +8651,8 @@ h1, h2, h3, h4, h5,
   .btn.btn-white {
     background: #fff;
     border: 1px solid #fff;
-    color: #1b9ce3; }
+    color: #1b9ce3;
+  }
     .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
       border: 1px solid #fff;
       color: #1b9ce3; }
@@ -9321,7 +9322,9 @@ textarea.form-control {
   color: rgba(255, 255, 255, 0.7); }
 
 .heading-section.heading-section-white h2 {
-  color: #fff; }
+  color: #fff; 
+
+}
 
 .heading-section.heading-section-white p {
   color: rgba(255, 255, 255, 0.9); }
@@ -9486,7 +9489,7 @@ textarea.form-control {
 
 .ftco-intro {
   position: relative;
-  padding: 3em 0;
+  padding: 5em 0;
   z-index: 0; }
   .ftco-intro:after {
     position: absolute;
@@ -9508,9 +9511,12 @@ textarea.form-control {
     background: linear-gradient(to right, #1566ad 0%, #1b9de3 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1566ad', endColorstr='#1b9de3', GradientType=1 ); }
   .ftco-intro .btn {
-    width: 100%; }
+    width: 100%;
+  padding-bottom: 1em; 
+
+   }
   .ftco-intro h2 {
-    line-height: 1.2; }
+    line-height: 1.7; }
 
 #section-counter {
   position: relative;
