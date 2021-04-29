@@ -8595,7 +8595,7 @@ h1, h2, h3, h4, h5,
           background: #fff; }
 
 .bg-light {
-  background: #f9fcfe !important; }
+  background: #f0f9fd !important; }
 
 .bg-darken {
   background: #233e62 !important; }
@@ -8655,7 +8655,9 @@ h1, h2, h3, h4, h5,
   }
     .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
       border: 1px solid #fff;
-      color: #1b9ce3; }
+      color: #1b9ce3; 
+      padding: 20px;;
+  }
     .btn.btn-white.btn-outline-white {
       border-color: rgba(255, 255, 255, 0.8);
       background: none;
@@ -9043,7 +9045,7 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 5em 0;
+  padding: 3em 0;
   position: relative; 
   font-size: 165x;
 }
@@ -9512,7 +9514,7 @@ textarea.form-control {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1566ad', endColorstr='#1b9de3', GradientType=1 ); }
   .ftco-intro .btn {
     width: 100%;
-  padding-bottom: 1em; 
+  padding-bottom: 2em; 
 
    }
   .ftco-intro h2 {
